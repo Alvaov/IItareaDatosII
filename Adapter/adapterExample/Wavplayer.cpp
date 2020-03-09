@@ -3,7 +3,7 @@
 
 void wavplayer::leerCancion(std::string titulo){
     this->titulo = titulo;
-    std::cout << "Leyendo " << this->titulo << std::endl;
+    std::cout << "Convirtiendo " << this->titulo << " a WAV" << std::endl;
 }
 
 void wavplayer::reproducir(){

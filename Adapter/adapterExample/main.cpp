@@ -1,8 +1,30 @@
 #include <QCoreApplication>
+#include <iostream>
+#include "MP3player.hpp"
 
-int main(int argc, char *argv[])
+//using namespace std;
+
+int main()
 {
-    QCoreApplication a(argc, argv);
+    std::string nombre;
+    mp3player cancionActual;
+    int activo = 1;
+    while (activo = 1) {
 
-    return a.exec();
+        std::cout << "Inserte su canción MP3 o detenga la actual: \n";
+        getline(std::cin,nombre);
+        if(nombre == "detener"){
+            cancionActual.detenerMp3();
+        }else{
+            cancionActual.titulo = nombre;
+            cancionActual.reproducirMp3();
+        }
+        std::cout << "--------------------------\n" << "¿Desea continuar?\n" << "Sí 1 \n" << "No 0 \n";
+        std::cin >> activo;
+        if(activo == 0){
+            break;
+        }
+
+    }
+    return 0;
 }

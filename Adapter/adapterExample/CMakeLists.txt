@@ -15,5 +15,12 @@ find_package(Qt5Core)
 
 add_executable(adapterExample
   main.cpp
+  adapterMP3toWAV.hpp
+  adapterMP3toWAV.cpp
+  WAVplayer.hpp
+  Wavplayer.cpp
+  MP3player.hpp
+  MP3player.cpp
+
 )
 target_link_libraries(adapterExample Qt5::Core)
