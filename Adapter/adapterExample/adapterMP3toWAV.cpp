@@ -3,9 +3,13 @@
 void adapterMP3toWAV::reproducir(){
 
         printf("Iniciando conversión . . .\n");
-        wavplayer cancionActual;
-        cancionActual.leerCancion(nombre);
-        printf("Conversión exitosa \n");
-        cancionActual.reproducir();
+        wavplayer* cancionActual = new wavplayer(44,nombre,"stereo",16);
+        this->cancionActual = cancionActual;
+        cancionActual->leerCancion();
+        cancionActual->reproducir();
 
+}
+
+void adapterMP3toWAV::detener(){
+    cancionActual->detener();
 }

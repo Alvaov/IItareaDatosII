@@ -9,7 +9,7 @@ int main()
     std::string nombre;
     mp3player cancionActual;
     int activo = 1;
-    while (activo = 1) {
+    while (activo == 1) {
 
         std::cout << "Inserte su canción MP3 o detenga la actual: \n";
         getline(std::cin,nombre);
@@ -19,7 +19,7 @@ int main()
             cancionActual.titulo = nombre;
             cancionActual.reproducirMp3();
         }
-        std::cout << "--------------------------\n" << "¿Desea continuar?\n" << "Sí 1 \n" << "No 0 \n";
+        std::cout << "--------------------------\n" << "¿Desea continuar?\n" << "Sí 1 \n" << "No 0 \n" << "--------------------------\n";
         std::cin >> activo;
         if(activo == 0){
             break;

@@ -8,9 +8,11 @@ void mp3player::reproducirMp3(){
     adapterMP3toWAV cancionActual;
     cancionActual.nombre = titulo;
     cancionActual.reproducir();
+    this->cancionActual = cancionActual;
 }
 
 
 void mp3player::detenerMp3(){
     printf("Deteniendo música . . .\n");
+    this->cancionActual.detener();
 }

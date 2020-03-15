@@ -8,10 +8,14 @@
 
 class wavplayer{
 
+    int kHz;
     std::string titulo;
+    std::string tipo;
+    int bits;
 
 public:
-    void leerCancion(std::string titulo);
+    wavplayer(int kHz, std::string titulo, std::string tipo, int bits);
+    void leerCancion();
     void reproducir();
     void detener();
 };

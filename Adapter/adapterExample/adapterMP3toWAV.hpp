@@ -9,9 +9,11 @@
 
 class adapterMP3toWAV{
 
+    wavplayer* cancionActual;
 public:
     std::string nombre;
     void reproducir();
+    void detener();
 };
 
 

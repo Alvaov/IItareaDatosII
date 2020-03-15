@@ -7,6 +7,8 @@
 
 class mp3player{
 
+    adapterMP3toWAV cancionActual;
+
 public:
     std::string titulo;
     void reproducirMp3();
